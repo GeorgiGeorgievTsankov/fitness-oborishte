@@ -1,133 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - FitnessPro Gym</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Галерия - Фитнес Клуб Оборище</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
     <nav>
-        <div class="logo">FitnessPro</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="index.html#why-us">Why Us</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#pricing">Pricing</a>
-            <a href="index.html#team">Team</a>
-            <a href="gallery.html" class="active">Gallery</a>
-            <a href="index.html#contact">Contact</a>
-        </div>
-        <div class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </div>
+      <div class="logo">FitnessPro</div>
+      <div class="nav-links">
+        <a href="index.html">НАЧАЛО</a>
+        <a href="index.html#why-us">ЗА НАС</a>
+        <a href="index.html#pricing">ЦЕНИ</a>
+        <a href="gallery.html" class="active">ГАЛЕРИЯ</a>
+        <a href="index.html#contact">КОНТАКТИ</a>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
 
-    <section class="full-gallery">
-        <h1>Our Gym Gallery</h1>
-        <div class="gallery-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="equipment">Equipment</button>
-            <button class="filter-btn" data-filter="classes">Classes</button>
-            <button class="filter-btn" data-filter="facilities">Facilities</button>
+    <section class="gallery-section">
+      <h1>Нашата Галерия</h1>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img
+            src="./img/IMG_1483.JPG"
+            alt="Фитнес зала"
+          />
         </div>
-        <div class="full-gallery-grid">
-            <div class="gallery-item" data-category="equipment">
-                <img src="https://source.unsplash.com/600x400/?gym-equipment" alt="Gym Equipment">
-                <div class="gallery-overlay">
-                    <h3>Modern Equipment</h3>
-                    <p>State-of-the-art fitness equipment</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="classes">
-                <img src="https://source.unsplash.com/600x400/?yoga-class" alt="Yoga Class">
-                <div class="gallery-overlay">
-                    <h3>Yoga Classes</h3>
-                    <p>Professional yoga instruction</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="facilities">
-                <img src="https://source.unsplash.com/600x400/?gym-interior" alt="Gym Interior">
-                <div class="gallery-overlay">
-                    <h3>Modern Interior</h3>
-                    <p>Spacious and well-designed spaces</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="equipment">
-                <img src="https://source.unsplash.com/600x400/?weights" alt="Weights">
-                <div class="gallery-overlay">
-                    <h3>Free Weights Area</h3>
-                    <p>Complete set of free weights</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="classes">
-                <img src="https://source.unsplash.com/600x400/?fitness-class" alt="Fitness Class">
-                <div class="gallery-overlay">
-                    <h3>Group Classes</h3>
-                    <p>Energetic group workouts</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="facilities">
-                <img src="https://source.unsplash.com/600x400/?locker-room" alt="Locker Room">
-                <div class="gallery-overlay">
-                    <h3>Locker Rooms</h3>
-                    <p>Clean and modern facilities</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="equipment">
-                <img src="https://source.unsplash.com/600x400/?cardio-equipment" alt="Cardio Equipment">
-                <div class="gallery-overlay">
-                    <h3>Cardio Zone</h3>
-                    <p>Latest cardio machines</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="classes">
-                <img src="https://source.unsplash.com/600x400/?spinning-class" alt="Spinning Class">
-                <div class="gallery-overlay">
-                    <h3>Spinning Studio</h3>
-                    <p>High-energy spinning sessions</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="facilities">
-                <img src="https://source.unsplash.com/600x400/?gym-cafe" alt="Protein Bar">
-                <div class="gallery-overlay">
-                    <h3>Protein Bar</h3>
-                    <p>Healthy refreshments and supplements</p>
-                </div>
-            </div>
+        <div class="gallery-item">
+          <img
+            src="./img/IMG_1485.JPG"
+            alt="Фитнес оборудване"
+          />
         </div>
+        <div class="gallery-item">
+          <img
+            src="./img/IMG_1486.JPG"
+            alt="Тренировка"
+          />
+        </div>
+      </div>
     </section>
 
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
+    </div>
+
     <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Fitness Street, Gym City</p>
-                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
-                <p><i class="fas fa-envelope"></i> info@fitnespro.com</p>
-            </div>
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <a href="index.html#services">Services</a>
-                <a href="index.html#pricing">Pricing</a>
-                <a href="gallery.html">Gallery</a>
-            </div>
-            <div class="social-links">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
+      <div class="footer-content">
+        <div class="contact-info">
+          <h3>Свържете се с нас</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> София, център, ул. "Оборище"
+            22
+          </p>
+          <p><i class="fas fa-phone"></i> 089 361 5161</p>
+          <p><i class="fas fa-envelope"></i> info@fitnespro.com</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 FitnessPro. All rights reserved.</p>
+        <div class="quick-links">
+          <h3>Бързи връзки</h3>
+          <a href="index.html">НАЧАЛО</a>
+          <a href="index.html#why-us">ЗА НАС</a>
+          <a href="index.html#pricing">ЦЕНИ</a>
+          <a href="gallery.html">ГАЛЕРИЯ</a>
+          <a href="index.html#contact">КОНТАКТИ</a>
         </div>
+        <div class="social-links">
+          <h3>Последвайте ни</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/fitnessoborishte/?locale=bg_BG"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Фитнес Клуб Оборище. Всички права запазени.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

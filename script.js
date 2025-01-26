@@ -65,13 +65,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Parallax Effect
-window.addEventListener("scroll", () => {
-  const parallax = document.querySelector(".parallax");
-  const scrolled = window.pageYOffset;
-  parallax.style.backgroundPositionY = `${scrolled * 0.5}px`;
-});
-
 // Animate elements on scroll
 const observerOptions = {
   threshold: 0.1,
@@ -94,32 +87,29 @@ document.querySelectorAll("section").forEach((section) => {
   observer.observe(section);
 });
 
-// Gallery Filtering
-if (document.querySelector(".gallery-filters")) {
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const galleryItems = document.querySelectorAll(".gallery-item");
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const galleryImages = document.querySelectorAll('.gallery-item img');
+const closeBtn = document.querySelector('.lightbox .close');
 
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      // Remove active class from all buttons
-      filterButtons.forEach((btn) => btn.classList.remove("active"));
-      // Add active class to clicked button
-      button.classList.add("active");
-
-      const filterValue = button.getAttribute("data-filter");
-
-      galleryItems.forEach((item) => {
-        if (
-          filterValue === "all" ||
-          item.getAttribute("data-category") === filterValue
-        ) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      });
+galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'block';
+        lightboxImg.src = img.src;
     });
-  });
-}
+});
+
+closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+    }
+});
+
+
 
 

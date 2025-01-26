@@ -146,7 +146,7 @@ nav {
 
 /* Why Choose Us Section */
 .why-us {
-  width: 80%;
+  width: 100%;
   margin: auto;
   padding: var(--section-padding);
   text-align: center;
@@ -162,7 +162,7 @@ nav {
 
 .reason {
   flex-basis: 300px;
-  margin: 2rem;
+  margin: 1rem;
   padding: 2rem;
   background-color: white;
   border-radius: 10px;
@@ -185,49 +185,6 @@ nav {
   padding: var(--section-padding);
   text-align: center;
 }
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.service {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.service.large {
-  grid-column: span 2;
-}
-
-.service img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.service:hover img {
-  transform: scale(1.1);
-}
-
-.service h3 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  margin: 0;
-  color: var(--primary-color);
-}
-
-
-
 
 /* Pricing Section */
 .pricing {
@@ -371,60 +328,37 @@ nav {
 }
 
 /* Gallery Section */
-.gallery {
-  padding: var(--section-padding);
+.gallery-section {
+  padding-top: 100px;
   text-align: center;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.gallery-grid img {
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.gallery-item img {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
-
-/* Team Section */
-.team {
-  padding: var(--section-padding);
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.team-member {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.team-member img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-.team-member h3 {
-  color: var(--primary-color);
+.gallery-item:hover img {
+  transform: scale(1.1);
 }
 
 /* Footer */
@@ -454,7 +388,7 @@ footer {
 .quick-links a {
   color: white;
   text-decoration: none;
-  margin: 0.5rem 0;
+  margin: 0.2rem 0;
   transition: color 0.3s;
 }
 
@@ -462,7 +396,7 @@ footer {
   color: var(--primary-color);
 }
 
-.news-item {
+.working-hours {
   margin: 1rem 0;
 }
 
@@ -488,89 +422,57 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Full Gallery Page Styles */
-.full-gallery {
-  padding: calc(var(--section-padding) + 80px) 2rem 5rem;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-.full-gallery h1 {
-  color: var(--light-text);
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-}
-
-.gallery-filters {
-  margin-bottom: 2rem;
-}
-
-.filter-btn {
-  background: none;
-  border: 2px solid var(--primary-color);
-  color: var(--light-text);
-  padding: 0.5rem 1.5rem;
-  margin: 0.5rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-.full-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.gallery-overlay {
-  position: absolute;
-  bottom: -100%;
+/* Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
   left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 1.5rem;
-  transition: bottom 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.1);
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90vh;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.gallery-item:hover .gallery-overlay {
-  bottom: 0;
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
 }
 
-.gallery-overlay h3 {
+.close:hover {
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
 }
 
-.gallery-overlay p {
-  color: var(--light-text);
-  font-size: 0.9rem;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .gallery-item img {
+    height: 250px;
+  }
 }
 
 /* Hero Section */
@@ -628,15 +530,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .full-gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -678,18 +572,8 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .team-grid {
     grid-template-columns: 1fr;
-  }
-
-  .gallery-filters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   .filter-btn {
@@ -700,10 +584,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
   .footer-content {
     grid-template-columns: 1fr;
   }
@@ -711,14 +591,4 @@ footer {
   .carousel-item h1 {
     font-size: 2.5rem;
   }
-
-  .full-gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-item img {
-    height: 250px;
-  }
 }
-
-
