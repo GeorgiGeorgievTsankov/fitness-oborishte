@@ -492,7 +492,6 @@ footer {
   .gallery-item img {
     height: 250px;
   }
-
 }
 
 /* Hero Section */
@@ -692,6 +691,36 @@ footer {
   }
   .section-testimonials-header h2 {
     font-size: 1.75rem;
+  }
+
+  /* Carousel Section */
+  .carousel-section {
+    height: 40vh;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 3rem;
+  }
+  
+  .carousel-item h1 {
+    padding-top: 20px;
+    line-height: 1;
+    color: yellowgreen;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    margin: 0;
+  }
+  
+  .carousel p {
+    font-size: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 }
 
