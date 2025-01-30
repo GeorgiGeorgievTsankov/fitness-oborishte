@@ -92,8 +92,9 @@ nav {
   transition: transform 0.5s ease-in-out;
 }
 .carousel-item:nth-child(1) {
-  background: linear-gradient(rgba(0, 100, 0, 0.5), rgba(0, 100, 0, 0.5)),
-    url("/img/8192.jpg");
+  background: linear-gradient(rgba(0, 100, 0, 0.2), rgba(0, 100, 0, 0.2)),
+    url("/img/hero2.jpg");
+    /* background: url("/img/hero2.jpg"); */
 }
 
 /* .carousel-item:nth-child() {
@@ -693,35 +694,6 @@ footer {
     font-size: 1.75rem;
   }
 
-  /* Carousel Section */
-  .carousel-section {
-    height: 40vh;
-  }
-
-  .carousel-item {
-    min-width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 3rem;
-  }
-  
-  .carousel-item h1 {
-    padding-top: 20px;
-    line-height: 1;
-    color: yellowgreen;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-    margin: 0;
-  }
-  
-  .carousel p {
-    font-size: 1rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
 }
 
 /* Testimonials Styles */
