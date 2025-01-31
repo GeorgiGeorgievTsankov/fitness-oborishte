@@ -102,8 +102,8 @@ nav {
   } */
 
 .carousel-item:nth-child(2) {
-  background: linear-gradient(rgba(0, 100, 0, 0.5), rgba(0, 100, 0, 0.5)),
-    url("/img/8193.jpg");
+  background: linear-gradient(rgba(0, 100, 0, 0.2), rgba(0, 100, 0, 0.2)),
+    url("/img/hero4.jpg");
 }
 
 .carousel-item:nth-child(1),
