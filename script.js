@@ -1,26 +1,27 @@
 // Testimonials Data
 const testimonials = [
     {
+        name: "Илиан Христов",
+        role: "Редовен клиент",
+        image: "https://lh3.googleusercontent.com/a-/ALV-UjXrLBgnAWdt7BDGEKS5HzmKL8e__Syo64Df0StY9Er51XWn6BY=w75-h75-p-rp-mo-br100",
+        quote: "Бил съм в доста фитнес зали през живота ми, но за първи път попадам на фитнес зала в която да получа такова отношение. Момчето, което ме обслужи беше изключително любезно. За първи път посещавам залата и определено ме спечелиха като клиент. Поздравления!",
+        rating: 5
+    },
+    {
         name: "Мария Иванова",
         role: "Фитнес ентусиаст",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200",
-        quote: "Страхотна атмосфера и професионално отношение. Постигнах невероятни резултати за 3 месеца!",
+        image: "https://lh3.googleusercontent.com/a-/ALV-UjX-hxscZxdRs6-I9OJeDgF-ybqLX0R3KYPJElZDDwxF1gBCq7MJKQ=w75-h75-p-rp-mo-ba3-br100",
+        quote: "Страхотно местенце с всички необходими уреди за пълноценна тренировка! Персоналът е изключително мил и любезен. Препоръчвам ги с две ръце!",
         rating: 5
     },
     {
         name: "Георги Петров",
         role: "Редовен клиент",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
-        quote: "Най-добрият фитнес в района. Перфектно оборудване и страхотни треньори.",
+        image: "https://lh3.googleusercontent.com/a-/ALV-UjX9f9jLg0wzwjdNZH5AmxNOsZvSYaXB0e7bJfi0dGeM17bIvZS8=w75-h75-p-rp-mo-ba3-br100",
+        quote: "Моят фитнес от една година. Малки, но класни, услужливи и мили хора, които също не са внушителни. Отлична стойност за парите, особено в щастливите часове. Имам всичко необходимо за моята тренировка. Единственото, за което съжалявам, че написах това ревю, е, че разкрива този малък скъпоценен камък ;)",
         rating: 5
     },
-    {
-        name: "Елена Димитрова",
-        role: "Йога практикуващ",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200&h=200",
-        quote: "Изключително съм доволна от условията в залата. След всяка тренировка се чувствам освежена и заредена с енергия!",
-        rating: 5
-    }
+  
 ];
 
 // Utility Functions

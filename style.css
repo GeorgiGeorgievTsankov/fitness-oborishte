@@ -50,7 +50,7 @@ nav {
 }
 
 .logo-img {
-  height: 50px;
+  height: 70px;
   width: auto;
 }
 
@@ -92,8 +92,8 @@ nav {
   transition: transform 0.5s ease-in-out;
 }
 .carousel-item:nth-child(1) {
-  background: linear-gradient(rgba(0, 100, 0, 0.2), rgba(0, 100, 0, 0.2)),
-    url("/img/hero2.jpg");
+  background: linear-gradient(rgba(0, 100, 0, 0.7), rgba(0, 100, 0, 0.7)),
+    url("/img/hero4.jpg");
   /* background: url("/img/hero2.jpg"); */
 }
 
@@ -103,7 +103,7 @@ nav {
 
 .carousel-item:nth-child(2) {
   background: linear-gradient(rgba(0, 100, 0, 0.2), rgba(0, 100, 0, 0.2)),
-    url("/img/hero4.jpg");
+    url("/img/hero1.jpg");
 }
 
 .carousel-item:nth-child(1),
@@ -126,7 +126,7 @@ nav {
 }
 
 .carousel-item h1 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
   color: yellowgreen;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
