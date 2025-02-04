@@ -92,7 +92,7 @@ nav {
   transition: transform 0.5s ease-in-out;
 }
 .carousel-item:nth-child(1) {
-  background: linear-gradient(rgba(0, 100, 0, 0.7), rgba(0, 100, 0, 0.7)),
+  background: linear-gradient(rgba(0, 100, 0, 0.2), rgba(0, 100, 0, 0.2)),
     url("/img/hero4.jpg");
   /* background: url("/img/hero2.jpg"); */
 }
