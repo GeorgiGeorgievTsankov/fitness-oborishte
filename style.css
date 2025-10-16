@@ -784,3 +784,115 @@ footer {
     text-decoration: underline;
   }
 }
+
+/* MultiSport Section */
+.multisport-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #f9f9fa 100%);
+  padding: 4rem 2rem;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.multisport-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(76, 175, 80, 0.1) 0%,
+    rgba(76, 175, 80, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+.multisport-container {
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.multisport-content {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(76, 175, 80, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.multisport-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.multisport-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.multisport-description {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* MultiSport Section ENDS*/
+
+/* Responsive adjustments for MultiSport section */
+@media (max-width: 768px) {
+  .multisport-section {
+    padding: 3rem 1rem;
+    min-height: 250px;
+  }
+
+  .multisport-content {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .multisport-title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .multisport-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .multisport-section {
+    padding: 2rem 1rem;
+    min-height: 200px;
+  }
+
+  .multisport-content {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .multisport-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .multisport-description {
+    font-size: 1rem;
+  }
+}
+/* Responsive adjustments for MultiSport section ENDS*/
