@@ -92,9 +92,13 @@ nav {
   transition: transform 0.5s ease-in-out;
 }
 .carousel-item:nth-child(1) {
-  background: linear-gradient(rgba(0, 100, 0, 0.2), rgba(0, 100, 0, 0.2)),
-    url("/img/hero4.jpg");
+  /*background: linear-gradient(rgba(0, 100, 0, 0.2), rgba(0, 100, 0, 0.2)),*/
+  /*  url("/img/hero-sales.png");*/
   /* background: url("/img/hero2.jpg"); */
+  background: url("/img/hero-summer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* .carousel-item:nth-child() {
@@ -135,29 +139,29 @@ nav {
 .carousel p {
   font-size: 1.5rem;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-.carousel-dots {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 1rem;
-}
+/*.carousel-dots {*/
+/*  position: absolute;*/
+/*  bottom: 2rem;*/
+/*  left: 50%;*/
+/*  transform: translateX(-50%);*/
+/*  display: flex;*/
+/*  gap: 1rem;*/
+/*}*/
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: yellowgreen;
-  cursor: pointer;
-}
+/*.dot {*/
+/*  width: 12px;*/
+/*  height: 12px;*/
+/*  border-radius: 50%;*/
+/*  background-color: yellowgreen;*/
+/*  cursor: pointer;*/
+/*}*/
 
-.dot.active {
-  background-color: var(--primary-color);
-}
+/*.dot.active {*/
+/*  background-color: var(--primary-color);*/
+/*}*/
 
 /* Why Choose Us Section */
 .why-us {
@@ -493,6 +497,10 @@ footer {
   .gallery-item img {
     height: 250px;
   }
+  
+   .carousel-section {
+    height: 60vh;
+  }
 }
 
 /* Hero Section */
@@ -515,31 +523,24 @@ footer {
   will-change: transform;
 }
 
-.hero-content h1 {
+/* Hero-Section H1, P */
+.carousel-item h1 {
   font-size: 4.5rem;
+  line-height: 1.2;
   margin-bottom: 10px;
   font-weight: bold;
   color: yellowgreen;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-.hero-content p {
-  font-size: 1.5rem;
-  line-height: 1.4;
+.carousel-item p {
+  font-size: 1.2rem;
+  line-height: 1.2;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
 
-  .hero-content p {
-    font-size: 1.2rem;
-  }
-}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
